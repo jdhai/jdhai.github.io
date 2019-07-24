@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSS,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第三节 高级选择器">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/CSS-第三节-高级选择器/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-24T09:58:02.898Z">
+<meta property="og:updated_time" content="2019-07-24T12:40:18.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第三节 高级选择器">
+<meta name="twitter:description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
 
 
 
@@ -326,7 +330,38 @@
       
 
       
-        
+        <h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>123<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">li</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面三种都可行.<br>第一种意在证明不直接的嵌套也可行.</p>
+<h2 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>123<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>必须是ul下面一层的li.  </p>
+<p>以上两种选择器不是必须要标签选择器,可以是基础选择器的任意组合,例如这样  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span> <span class="selector-tag">div</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>+<span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>div后面的p</p>
+<h2 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,</span><br><span class="line"><span class="selector-class">.demo</span>,</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>几个属于并列关系(任意选择器),用 <code>,</code> 隔开</p>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>格式如下:</p>
+<blockquote>
+<p>a:link {color: #FF0000}  /* 未访问的链接 <em>/<br>a:visited {color: #00FF00}  /</em> 已访问的链接 <em>/<br>a:hover {color: #FF00FF}  /</em> 鼠标移动到链接上 <em>/<br>a:active {color: #0000FF}  /</em> 选定的链接 */  </p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/css/css_pseudo_classes.asp" target="_blank" rel="noopener">更多关于伪类</a></p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="built_in">url</span>(logo.gif);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一、  ::first-letter 第一个字</p>
+<p>二、 ::first-line 第一行（以浏览器为准的第一行）</p>
+<p>三、 ::selection 被选中的字行（鼠标选中的字段）只能向 ::selection 选择器应用少量 CSS 属性：color、background、cursor 以及 outline。</p>
+<p>四、 ::before 和 ::after</p>
+<p><a href="http://www.w3school.com.cn/css/css_pseudo_elements.asp" target="_blank" rel="noopener">更多关于伪元素</a></p>
+
       
     </div>
     
@@ -340,6 +375,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
       
 
       
@@ -360,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/24/CSS-第四节-权重及其计算/" rel="prev" title="CSS 第四节 权重及其计算">
-                CSS 第四节 权重及其计算 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/24/CSS-第四节-权重及其计算/" rel="prev" title="CSS 第四节 权重及其计算 CSS从右解析">
+                CSS 第四节 权重及其计算 CSS从右解析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -414,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -482,6 +532,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后代选择器"><span class="nav-number">1.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素选择器"><span class="nav-number">2.</span> <span class="nav-text">子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">3.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组选择器"><span class="nav-number">4.</span> <span class="nav-text">分组选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类"><span class="nav-number">5.</span> <span class="nav-text">伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">6.</span> <span class="nav-text">伪元素</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

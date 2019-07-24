@@ -79,15 +79,18 @@
 
 
 
+<meta name="description" content="id 选择器特点：一个元素只能有一个 id 值，一个 id 只对应一个元素—–类似于身份证   1&amp;lt;div id = &quot;only&quot;&amp;gt;123&amp;lt;/div&amp;gt;  123#only &amp;#123; background-color: red;&amp;#125;  class (类) 选择器特点：一个 class 可以对应多个元素,一个元素也能有多个class—–衣服   12&amp;lt;div">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第二节 基础选择器">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/CSS-第二节-基础选择器/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="id 选择器特点：一个元素只能有一个 id 值，一个 id 只对应一个元素—–类似于身份证   1&amp;lt;div id = &quot;only&quot;&amp;gt;123&amp;lt;/div&amp;gt;  123#only &amp;#123; background-color: red;&amp;#125;  class (类) 选择器特点：一个 class 可以对应多个元素,一个元素也能有多个class—–衣服   12&amp;lt;div">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-24T09:58:39.385Z">
+<meta property="og:updated_time" content="2019-07-24T11:48:18.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第二节 基础选择器">
+<meta name="twitter:description" content="id 选择器特点：一个元素只能有一个 id 值，一个 id 只对应一个元素—–类似于身份证   1&amp;lt;div id = &quot;only&quot;&amp;gt;123&amp;lt;/div&amp;gt;  123#only &amp;#123; background-color: red;&amp;#125;  class (类) 选择器特点：一个 class 可以对应多个元素,一个元素也能有多个class—–衣服   12&amp;lt;div">
 
 
 
@@ -327,7 +330,32 @@
       
 
       
-        
+        <h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><p><font color="#00BFFF">特点：一个元素只能有一个 id 值，一个 id 只对应一个元素—–类似于身份证</font>  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"only"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#only</span> &#123;</span><br><span class="line"> <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="class-类-选择器"><a href="#class-类-选择器" class="headerlink" title="class (类) 选择器"></a>class (类) 选择器</h2><p><font color="#00BFFF">特点：一个 class 可以对应多个元素,一个元素也能有多个class—–衣服</font>  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span> = <span class="string">"demo1 demo2"</span>&gt;</span>黄色背景蓝色字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>蓝色<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#00f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#ff0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用多个class的方法就是<code>class = &quot;demo1 demo2 demo3&quot;</code>  </p>
+<h3 id="结合元素选择器"><a href="#结合元素选择器" class="headerlink" title="结合元素选择器"></a>结合元素选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.demo</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>类为为demo的p标签  </p>
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这是什么颜色的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#00f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所有的div都会受到影响,即使是嵌套着的.  </p>
+<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所有的标签包括<code>html</code>都会受影响.</p>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p><code>[att]</code><br>表示具有att属性的元素，无论该属性的值如何。  </p>
+<p><code>[att=val]</code><br>表示具有att属性,值正好为”val”的元素。  </p>
+<p><a href="http://www.w3school.com.cn/css/css_syntax_attribute_selector.asp" target="_blank" rel="noopener">更多关于属性选择器</a></p>
+
       
     </div>
     
@@ -421,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -489,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#id-选择器"><span class="nav-number">1.</span> <span class="nav-text">id 选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class-类-选择器"><span class="nav-number">2.</span> <span class="nav-text">class (类) 选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结合元素选择器"><span class="nav-number">2.1.</span> <span class="nav-text">结合元素选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签选择器"><span class="nav-number">3.</span> <span class="nav-text">标签选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通配符选择器"><span class="nav-number">4.</span> <span class="nav-text">通配符选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性选择器"><span class="nav-number">5.</span> <span class="nav-text">属性选择器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
