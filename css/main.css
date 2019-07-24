@@ -425,7 +425,7 @@ td {
 th,
 td {
   border-bottom: 3px solid #ddd;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #f7baa1;
 }
 th {
   padding-bottom: 10px;
@@ -499,7 +499,7 @@ code {
   padding: 2px 4px;
   word-wrap: break-word;
   color: #555;
-  background: #eee;
+  background: #f7baa1;
   border-radius: 3px;
   font-size: 13px;
 }
@@ -745,7 +745,7 @@ pre .javascript .function {
   position: relative;
   padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
+  border: 1px solid #f7baa1;
   border-left-width: 5px;
   border-radius: 3px;
 }
@@ -976,7 +976,7 @@ pre .javascript .function {
 .pagination {
   margin: 120px 0 40px;
   text-align: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #f7baa1;
 }
 .page-number-basic,
 .pagination .prev,
@@ -1002,7 +1002,7 @@ pre .javascript .function {
 .pagination .next,
 .pagination .page-number {
   border-bottom: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #f7baa1;
   transition-property: border-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -1037,7 +1037,7 @@ pre .javascript .function {
   .pagination .page-number {
     margin-bottom: 10px;
     border-top: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f7baa1;
     padding: 0 10px;
   }
   .pagination .prev:hover,
@@ -1561,7 +1561,7 @@ pre .javascript .function {
   display: table;
   margin-top: 15px;
   width: 100%;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #f7baa1;
 }
 .post-nav-divider {
   display: table-cell;
@@ -1675,7 +1675,7 @@ pre .javascript .function {
   border-bottom-color: #555;
 }
 .sidebar a:hover {
-  color: #eee;
+  color: #f7baa1;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar {
@@ -1741,7 +1741,7 @@ pre .javascript .function {
   padding: 2px;
   max-width: 120px;
   height: auto;
-  border: 1px solid #eee;
+  border: 1px solid #f7baa1;
 }
 .site-author-name {
   margin: 0;
@@ -1764,7 +1764,7 @@ pre .javascript .function {
 .site-state-item {
   display: inline-block;
   padding: 0 15px;
-  border-left: 1px solid #eee;
+  border-left: 1px solid #f7baa1;
 }
 .site-state-item:first-child {
   border-left: none;
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9eff;
+  background: #50e56f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2930,7 +2930,7 @@ pre .javascript .function {
 }
 .links-of-author-item a:hover {
   border-radius: 4px;
-  background: #eee;
+  background: #f7baa1;
 }
 .links-of-author-item .fa {
   margin-right: 2px;
