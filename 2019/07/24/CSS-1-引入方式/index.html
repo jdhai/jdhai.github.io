@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="CSS引入方式一共有三种">
+<meta name="description" content="开始之前介绍下CSS 指层叠样式表 (Cascading Style Sheets)CSS 注释方式仅有  /* 被注释的内容 */ CSS的引入方式有三种   行间样式在标签里使用style=&amp;quot;&amp;quot;叫做行间样式 1&amp;lt;div style=&quot;color: blue&quot;&amp;gt;这是什么颜色的&amp;lt;/div&amp;gt;  内部样式css写在&amp;lt;head&amp;gt;&amp;lt;/head&amp;">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS(1):引入方式">
+<meta property="og:title" content="CSS 第一节 入门 引入方式">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/CSS-1-引入方式/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="CSS引入方式一共有三种">
+<meta property="og:description" content="开始之前介绍下CSS 指层叠样式表 (Cascading Style Sheets)CSS 注释方式仅有  /* 被注释的内容 */ CSS的引入方式有三种   行间样式在标签里使用style=&amp;quot;&amp;quot;叫做行间样式 1&amp;lt;div style=&quot;color: blue&quot;&amp;gt;这是什么颜色的&amp;lt;/div&amp;gt;  内部样式css写在&amp;lt;head&amp;gt;&amp;lt;/head&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-24T08:17:55.079Z">
+<meta property="og:updated_time" content="2019-07-24T09:55:05.721Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS(1):引入方式">
-<meta name="twitter:description" content="CSS引入方式一共有三种">
+<meta name="twitter:title" content="CSS 第一节 入门 引入方式">
+<meta name="twitter:description" content="开始之前介绍下CSS 指层叠样式表 (Cascading Style Sheets)CSS 注释方式仅有  /* 被注释的内容 */ CSS的引入方式有三种   行间样式在标签里使用style=&amp;quot;&amp;quot;叫做行间样式 1&amp;lt;div style=&quot;color: blue&quot;&amp;gt;这是什么颜色的&amp;lt;/div&amp;gt;  内部样式css写在&amp;lt;head&amp;gt;&amp;lt;/head&amp;">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>CSS(1):引入方式 | Hexo</title>
+  <title>CSS 第一节 入门 引入方式 | Hexo</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS(1):引入方式</h1>
+          <h1 class="post-title" itemprop="name headline">CSS 第一节 入门 引入方式</h1>
         
 
         <div class="post-meta">
@@ -330,8 +330,18 @@
       
 
       
-        <p>CSS引入方式一共有三种</p>
+        <p>开始之前介绍下<br>CSS 指层叠样式表 (Cascading Style Sheets)<br>CSS 注释方式仅有  <code>/* 被注释的内容 */</code></p>
+<p><font color="#00BFFF">CSS的引入方式有三种</font>  </p>
+<h2 id="行间样式"><a href="#行间样式" class="headerlink" title="行间样式"></a>行间样式</h2><p>在标签里使用<code>style=&quot;&quot;</code>叫做行间样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"color: blue"</span>&gt;</span>这是什么颜色的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="内部样式"><a href="#内部样式" class="headerlink" title="内部样式"></a>内部样式</h2><p>css写在<code>&lt;head&gt;&lt;/head&gt;</code>里面的<code>&lt;style&gt;&lt;/style&gt;</code>标签中</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        color: aqua;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是什么颜色的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h2><p>外部引用是用<code>&lt;link&gt;</code>单标签链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"Untitled-1.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是什么颜色的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -370,6 +380,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/24/CSS-第二节-基础选择器/" rel="prev" title="CSS 第二节 基础选择器">
+                CSS 第二节 基础选择器 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -421,8 +435,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -437,7 +460,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -489,6 +512,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行间样式"><span class="nav-number">1.</span> <span class="nav-text">行间样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部样式"><span class="nav-number">2.</span> <span class="nav-text">内部样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部样式"><span class="nav-number">3.</span> <span class="nav-text">外部样式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
