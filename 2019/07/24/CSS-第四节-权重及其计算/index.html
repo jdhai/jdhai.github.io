@@ -88,7 +88,8 @@
 <meta property="og:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/specificityimg.png">
-<meta property="og:updated_time" content="2019-07-25T04:22:30.124Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/right.png">
+<meta property="og:updated_time" content="2019-07-25T04:57:59.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第四节 权重及其计算 CSS从右解析">
 <meta name="twitter:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
@@ -397,7 +398,10 @@
 
 <p>正无穷+12 比 正无穷+11 大,所以绿色  </p>
 <p>CSS3中有一个特殊选择器<br><code>：not（x）</code>：否定选择器没有值,其中的x(选择器)有值  </p>
-
+<p><a href="http://www.standardista.com/css3/css-specificity/" target="_blank" rel="noopener">图片的来源</a>  </p>
+<h2 id="CSS从右解析"><a href="#CSS从右解析" class="headerlink" title="CSS从右解析"></a>CSS从右解析</h2><p><img src="right.png" alt="alt">  </p>
+<p>先找到li再找ul,从右开始找(这是最快的)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ul&gt; li &#123;color：red;&#125;</span><br><span class="line">ul li &#123;color：blue;&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -436,6 +440,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/25/CSS-第五节-语法/" rel="prev" title="CSS 第五节 语法">
+                CSS 第五节 语法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -512,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -574,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#权重值"><span class="nav-number">1.</span> <span class="nav-text">权重值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权重计算"><span class="nav-number">2.</span> <span class="nav-text">权重计算</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#权重值"><span class="nav-number">1.</span> <span class="nav-text">权重值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权重计算"><span class="nav-number">2.</span> <span class="nav-text">权重计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS从右解析"><span class="nav-number">3.</span> <span class="nav-text">CSS从右解析</span></a></li></ol></div>
             
 
           </div>
