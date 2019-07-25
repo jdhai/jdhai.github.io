@@ -82,14 +82,14 @@
 <meta name="description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS 第三节 高级选择器">
+<meta property="og:title" content="CSS 第三节 选择器进阶">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/CSS-第三节-高级选择器/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T01:41:32.804Z">
+<meta property="og:updated_time" content="2019-07-25T04:09:38.796Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS 第三节 高级选择器">
+<meta name="twitter:title" content="CSS 第三节 选择器进阶">
 <meta name="twitter:description" content="后代选择器12345&amp;lt;div&amp;gt;    &amp;lt;ul&amp;gt;        &amp;lt;li&amp;gt;123&amp;lt;/li&amp;gt;    &amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;  123div li &amp;#123;&amp;#125;ul li &amp;#123;&amp;#125;div ul li &amp;#123;&amp;#125;  上面三种都可行.第一种意在证明不直接的嵌套也可行. 子元素选择器123&amp;lt;u">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>CSS 第三节 高级选择器 | Hexo</title>
+  <title>CSS 第三节 选择器进阶 | Hexo</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS 第三节 高级选择器</h1>
+          <h1 class="post-title" itemprop="name headline">CSS 第三节 选择器进阶</h1>
         
 
         <div class="post-meta">
@@ -346,9 +346,6 @@
 <h2 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>+<span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>div后面的p(中间不能有间隔)</p>
-<h2 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,</span><br><span class="line"><span class="selector-class">.demo</span>,</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>几个属于并列关系(任意选择器),用 <code>,</code> 隔开</p>
 <h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>格式如下:</p>
 <blockquote>
 <p>a:link {color: #FF0000}  /* 未访问的链接 <em>/<br>a:visited {color: #00FF00}  /</em> 已访问的链接 <em>/<br>a:hover {color: #FF00FF}  /</em> 鼠标移动到链接上 <em>/<br>a:active {color: #0000FF}  /</em> 选定的链接 */  </p>
@@ -361,6 +358,15 @@
 <p>三、 ::selection 被选中的字行（鼠标选中的字段）只能向 ::selection 选择器应用少量 CSS 属性：color、background、cursor 以及 outline。</p>
 <p>四、 ::before 和 ::after</p>
 <p><a href="http://www.w3school.com.cn/css/css_pseudo_elements.asp" target="_blank" rel="noopener">更多关于伪元素</a></p>
+<h2 id="分组-和-嵌套-选择器"><a href="#分组-和-嵌套-选择器" class="headerlink" title="分组 和 嵌套 选择器"></a>分组 和 嵌套 选择器</h2><h3 id="结合元素选择器-嵌套"><a href="#结合元素选择器-嵌套" class="headerlink" title="结合元素选择器(嵌套)"></a>结合元素选择器(嵌套)</h3><p>类为demo的p标签  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.demo</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>id为a,class为b的标签(不要说id是唯一的干嘛还加class,举例嘛)  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#a</span><span class="selector-class">.b</span>&#123;<span class="attribute">color</span>:blue;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,</span><br><span class="line"><span class="selector-class">.demo</span>,</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>几个属于并列关系(任意选择器),用 <code>,</code> 隔开</p>
 
       
     </div>
@@ -542,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后代选择器"><span class="nav-number">1.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素选择器"><span class="nav-number">2.</span> <span class="nav-text">子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">3.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组选择器"><span class="nav-number">4.</span> <span class="nav-text">分组选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类"><span class="nav-number">5.</span> <span class="nav-text">伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">6.</span> <span class="nav-text">伪元素</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后代选择器"><span class="nav-number">1.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子元素选择器"><span class="nav-number">2.</span> <span class="nav-text">子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">3.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪类"><span class="nav-number">4.</span> <span class="nav-text">伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪元素"><span class="nav-number">5.</span> <span class="nav-text">伪元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组-和-嵌套-选择器"><span class="nav-number">6.</span> <span class="nav-text">分组 和 嵌套 选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结合元素选择器-嵌套"><span class="nav-number">6.1.</span> <span class="nav-text">结合元素选择器(嵌套)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组选择器"><span class="nav-number">6.2.</span> <span class="nav-text">分组选择器</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -88,7 +88,7 @@
 <meta property="og:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/specificityimg.png">
-<meta property="og:updated_time" content="2019-07-25T02:35:33.570Z">
+<meta property="og:updated_time" content="2019-07-25T04:22:30.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第四节 权重及其计算 CSS从右解析">
 <meta name="twitter:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
@@ -370,9 +370,33 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li &#123;color：red;&#125;</span><br><span class="line">li &#123;color：blue;&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="权重计算"><a href="#权重计算" class="headerlink" title="权重计算"></a>权重计算</h2><p><img src="specificityimg.png" alt="alt"></p>
-<p>想〜，&gt;和+之类的组合符号对权重没有任何影响.<br>例子中的权重都是2,谁在后面就是显示谁(后面的覆盖前面的)</p>
+<p><font color="#00BFFF">计算方式是组合选择器中所有单个选择器(上表有的)权重之和.</font>  </p>
+<p>像〜，&gt;和+之类的组合符号对权重没有任何影响.<br>例子中的权重都是2,谁在后面就是显示谁(后面的覆盖前面的)  </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ul&gt; li &#123;color：red;&#125; 0-0-2</span><br><span class="line">ul li &#123;color：blue;&#125; 0-0-2</span><br></pre></td></tr></table></figure>
 
+<p>分组选择器中不能把不同组的加在一起,只能组内相加.  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>,                0<span class="selector-tag">-0-1</span></span><br><span class="line"><span class="selector-class">.demo</span>,              0<span class="selector-tag">-1-0</span></span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>,          0<span class="selector-tag">-0-3</span></span><br><span class="line">p &#123;                 0-0-1</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>计算机中无穷加一会比无穷大,所以<code>!important</code>也能参与计算  </p>
+<p>下面看几个例子:  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"classDiv"</span> <span class="attr">id</span>=<span class="string">"idDiv"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"classP"</span> <span class="attr">id</span>=<span class="string">"idP"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-class">.classDiv</span> <span class="selector-id">#idP</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="selector-id">#idDiv</span> <span class="selector-class">.classP</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>都是110,所以红色  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#idDiv</span> &gt; <span class="selector-class">.classP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.classDiv</span> <span class="selector-id">#idP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>&gt;</code>符号没影响,还是绿色  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#idDiv</span> &gt; <span class="selector-tag">p</span><span class="selector-class">.classP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.classDiv</span> <span class="selector-id">#idP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面增加了一个p,变成了111,所以红色  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#idDiv</span> <span class="selector-tag">p</span><span class="selector-class">.classP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-class">.classP</span><span class="selector-id">#idP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>权重都是111  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span><span class="selector-class">.classP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.classP</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:red<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正无穷+12 比 正无穷+11 大,所以绿色  </p>
+<p>CSS3中有一个特殊选择器<br><code>：not（x）</code>：否定选择器没有值,其中的x(选择器)有值  </p>
 
       
     </div>
@@ -403,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/24/CSS-第三节-高级选择器/" rel="next" title="CSS 第三节 高级选择器">
-                <i class="fa fa-chevron-left"></i> CSS 第三节 高级选择器
+              <a href="/2019/07/24/CSS-第三节-高级选择器/" rel="next" title="CSS 第三节 选择器进阶">
+                <i class="fa fa-chevron-left"></i> CSS 第三节 选择器进阶
               </a>
             
           </div>
