@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSS,">
 
 
 
@@ -79,14 +79,20 @@
 
 
 
+<meta name="description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第四节 权重及其计算 CSS从右解析">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-24T10:59:29.379Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/specificityimg.png">
+<meta property="og:updated_time" content="2019-07-25T02:35:33.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第四节 权重及其计算 CSS从右解析">
+<meta name="twitter:description" content="权重值   选择器 权重值    !important infinity   行间样式 1000   id选择器 0100   class 选择器、属性选择器、伪类 0010   标签选择器、伪元素 0001   通配符选择器 0000   权重并不是真的1,10,100他们不是10进制而是至少256进制可以看看这里   我们甚至可以将三种引入方式进行比较最后结果是:行间样式 &amp;gt; 内部CSS">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/24/CSS-第四节-权重及其计算/specificityimg.png">
 
 
 
@@ -326,7 +332,48 @@
       
 
       
-        
+        <h2 id="权重值"><a href="#权重值" class="headerlink" title="权重值"></a>权重值</h2><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>权重值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>!important</td>
+<td>infinity</td>
+</tr>
+<tr>
+<td>行间样式</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>class 选择器、属性选择器、伪类</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>标签选择器、伪元素</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>通配符选择器</td>
+<td>0000</td>
+</tr>
+</tbody></table>
+<p>权重并不是真的1,10,100<br>他们不是10进制而是<font color="#f40">至少256进制</font><br><a href="https://link" target="_blank" rel="noopener">可以看看这里</a>  </p>
+<p>我们甚至可以将三种引入方式进行比较最后结果是:<br><code>行间样式 &gt; 内部CSS &gt; 外部CSS</code></p>
+<p>那么权重相同会怎么样呢?<br>谁在后面就是显示谁(相同效果的后面的覆盖前面的),下面效果都是控制颜色,显示蓝色  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li &#123;color：red;&#125;</span><br><span class="line">li &#123;color：blue;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="权重计算"><a href="#权重计算" class="headerlink" title="权重计算"></a>权重计算</h2><p><img src="specificityimg.png" alt="alt"></p>
+<p>想〜，&gt;和+之类的组合符号对权重没有任何影响.<br>例子中的权重都是2,谁在后面就是显示谁(后面的覆盖前面的)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ul&gt; li &#123;color：red;&#125; 0-0-2</span><br><span class="line">ul li &#123;color：blue;&#125; 0-0-2</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -340,6 +387,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
       
 
       
@@ -410,8 +463,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +540,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#权重值"><span class="nav-number">1.</span> <span class="nav-text">权重值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权重计算"><span class="nav-number">2.</span> <span class="nav-text">权重计算</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
