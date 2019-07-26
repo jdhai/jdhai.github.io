@@ -79,15 +79,28 @@
 
 
 
+<meta name="description" content="盒子模型1）盒子的组成三大部分：A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 width+height    2）盒子模型（四部分组成）A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 content=width+heightD 盒子外边距 margin    盒子的大小会成为笔试的一部分,计算盒子大小是第一种(不包含margin)body自带的margin">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS 第七节 盒子模型 层模型 等等">
+<meta property="og:title" content="CSS 第七节 盒子模型 层模型">
 <meta property="og:url" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="盒子模型1）盒子的组成三大部分：A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 width+height    2）盒子模型（四部分组成）A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 content=width+heightD 盒子外边距 margin    盒子的大小会成为笔试的一部分,计算盒子大小是第一种(不包含margin)body自带的margin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T09:05:52.040Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/%E5%9B%9B%E4%B8%AA%E6%96%B9%E5%90%91.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/padding.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/xy.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/%E8%BF%9C%E8%A7%86%E5%9B%BE.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/margin.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/absolute.gif">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/relative.gif">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/absolute2.gif">
+<meta property="og:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/relative2.gif">
+<meta property="og:updated_time" content="2019-07-26T10:01:55.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS 第七节 盒子模型 层模型 等等">
+<meta name="twitter:title" content="CSS 第七节 盒子模型 层模型">
+<meta name="twitter:description" content="盒子模型1）盒子的组成三大部分：A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 width+height    2）盒子模型（四部分组成）A 盒子壁 borderB 盒子内边距 paddingC 盒子内容 content=width+heightD 盒子外边距 margin    盒子的大小会成为笔试的一部分,计算盒子大小是第一种(不包含margin)body自带的margin">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/25/CSS-第七节-盒子模型-层模型-等等/%E5%9B%9B%E4%B8%AA%E6%96%B9%E5%90%91.png">
 
 
 
@@ -123,7 +136,7 @@
 
 
 
-  <title>CSS 第七节 盒子模型 层模型 等等 | Hexo</title>
+  <title>CSS 第七节 盒子模型 层模型 | Hexo</title>
   
 
 
@@ -277,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS 第七节 盒子模型 层模型 等等</h1>
+          <h1 class="post-title" itemprop="name headline">CSS 第七节 盒子模型 层模型</h1>
         
 
         <div class="post-meta">
@@ -327,7 +340,61 @@
       
 
       
-        
+        <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>1）盒子的组成三大部分：<br>A 盒子壁 border<br>B 盒子内边距 padding<br>C 盒子内容 width+height   </p>
+<p>2）盒子模型（四部分组成）<br>A 盒子壁 border<br>B 盒子内边距 padding<br>C 盒子内容 content=width+height<br>D 盒子外边距 margin   </p>
+<p>盒子的大小会成为笔试的一部分,计算盒子大小是第一种(不包含margin)<br>body自带的margin值是多少也出现过.   </p>
+<p><img src="%E5%9B%9B%E4%B8%AA%E6%96%B9%E5%90%91.png" alt="alt">  </p>
+<p>下面这种，文字和盒子之间隔出了距离，就是 padding，padding 内边距是不能放内<br>容的。内容是放到内容区 content 的。  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(0, 123, 139);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="padding.png" alt="alt">  </p>
+<p>文档的坐标轴是这样的  </p>
+<p><img src="xy.png" alt="alt">  </p>
+<p>设置了 margin 就会推动盒子移动  </p>
+<h3 id="盒子大小计算"><a href="#盒子大小计算" class="headerlink" title="盒子大小计算"></a>盒子大小计算</h3><p><font color="#00BFFF">计算可视区域,真实的大小不包括margin</font>  </p>
+<p>例  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(0, 123, 139);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>realWidth：100+10+10+20+20px=160px<br>realHeight：100+10+10+10+30px=160px  </p>
+<h3 id="远视图"><a href="#远视图" class="headerlink" title="远视图"></a>远视图</h3><p>画个简单的盒子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content1</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0f0</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0f0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>按照那个来增加  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content1</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0f0</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0f0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0f0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">90px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0f0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="%E8%BF%9C%E8%A7%86%E5%9B%BE.png" alt="alt">  </p>
+<h3 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h3><p>通过调整 margin，调整距离  </p>
+<p><img src="margin.png" alt="alt">  </p>
+<h2 id="层模型"><a href="#层模型" class="headerlink" title="层模型"></a>层模型</h2><p><font color="#00BFFF">position 属性规定元素的定位类型。</font><br>当position的值为非static时，其层叠级别通过z-index属性定义。 </p>
+<ol>
+<li>static: 默认属性,对象遵循常规流。此时4个定位偏移属性不会被应用。   </li>
+<li>relative： 对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。   </li>
+<li>absolute： 对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。   </li>
+<li>fixed： 与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。   </li>
+<li>sticky： 对象在常态时遵循常规流。它就像是relative和fixed的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）   </li>
+</ol>
+<p>定位时left就是盒子的左边框相对,right是右边框,left和top是相对于左上角,以此类推…  </p>
+<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><p><font color="#8470FF">脱离原来位置定位(人移动位置)</font>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: crimson;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.4</span>;     <span class="comment">/*透明度*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: darkcyan;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="absolute.gif" alt="alt" title="absolute效果">  </p>
+<h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><p><font color="#008000">保留原来位置定位(灵魂移动位置,身体还在)</font>  </p>
+<p><img src="relative.gif" alt="alt" title="relative效果">  </p>
+<h3 id="居中广告demo"><a href="#居中广告demo" class="headerlink" title="居中广告demo"></a>居中广告demo</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f0f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>fixed相对于窗口定位<br>50%让左上角居中<br>margin值为负让其中心居中  </p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><font color="#8470FF">absolute相对于有定位的父级(祖父级…)进行定位,如果没有,那么相对于文档定位</font>   </p>
+<p><img src="absolute2.gif" alt="alt">  </p>
+<p><font color="#008000">relative相对于原来的位置进行对位</font>   </p>
+<p><img src="relative2.gif" alt="alt">   </p>
+<p><font color="#00BFFF" size="4">综上所述:relative可以给元素增加定位属性,然后用absolute进行定位</font>   </p>
+<h2 id="小练习题目-居中五环"><a href="#小练习题目-居中五环" class="headerlink" title="小练习题目-居中五环"></a>小练习题目-居中五环</h2><p>z-index 设置整数值,值越大越上层显示<br>border-radius : 50%; 圆;  </p>
+<p>要求,对颜色镶嵌没要求(5环不用套着)  </p>
+
       
     </div>
     
@@ -366,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/25/CSS-第八节-元素分类-自带css属性/" rel="prev" title="CSS 第八节 元素分类(自带css属性修改)">
+                CSS 第八节 元素分类(自带css属性修改) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -417,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -433,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -485,6 +565,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子模型"><span class="nav-number">1.</span> <span class="nav-text">盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子大小计算"><span class="nav-number">1.1.</span> <span class="nav-text">盒子大小计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远视图"><span class="nav-number">1.2.</span> <span class="nav-text">远视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#margin"><span class="nav-number">1.3.</span> <span class="nav-text">margin</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层模型"><span class="nav-number">2.</span> <span class="nav-text">层模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#absolute"><span class="nav-number">2.1.</span> <span class="nav-text">absolute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#relative"><span class="nav-number">2.2.</span> <span class="nav-text">relative</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#居中广告demo"><span class="nav-number">2.3.</span> <span class="nav-text">居中广告demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小练习题目-居中五环"><span class="nav-number">3.</span> <span class="nav-text">小练习题目-居中五环</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
