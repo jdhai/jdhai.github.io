@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSS,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
-<meta property="og:url" content="http://yoursite.com/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/index.html">
+<meta property="og:site_name" content="Hexo | 菜鸟笔记">
+<meta property="og:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-26T13:38:51.520Z">
+<meta property="og:updated_time" content="2019-07-27T08:20:59.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
+<meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/">
+  <link rel="canonical" href="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/">
 
 
 
 
 
-  <title>CSS 第十节 margin塌陷 margin合并 BFC | Hexo</title>
+  <title>CSS 第十节 margin塌陷 margin合并 BFC | Hexo | 菜鸟笔记</title>
   
 
 
@@ -152,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">Hexo | 菜鸟笔记</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -259,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/">
+    <link itemprop="mainEntityOfPage" href="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Catlair">
@@ -268,7 +272,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Hexo | 菜鸟笔记">
     </span>
 
     
@@ -326,7 +330,16 @@
       
 
       
-        
+        <h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p><strong>块格式化上下文（Block Formatting Context，BFC）</strong> 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]   </p>
+<p>下列方式会创建块格式化上下文：  </p>
+<p>根元素(<code>&lt;html&gt;</code>)<br>浮动元素（元素的 <code>float</code> 不是 <code>none</code>）<br>绝对定位元素（元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code>）<br>行内块元素（元素的 <code>display</code> 为 <code>inline-block</code>）<br>表格单元格（元素的 <code>display</code>为 <code>table-cell</code>，HTML表格单元格默认为该值）<br>表格标题（元素的 <code>display</code> 为 <code>table-caption</code>，HTML表格标题默认为该值）<br>匿名表格单元格元素（元素的 <code>display</code>为 <code>table</code>、<code>table-row</code>、 <code>table-row-group</code>、<code>table-header-group</code>、<code>table-footer-group</code>（分别是HTML table、row、tbody、thead、tfoot的默认属性）或 <code>inline-table</code>）<br><code>overflow</code> 值不为 <code>visible</code> 的块元素<br><code>display</code> 值为 <code>flow-root</code> 的元素<br><code>contain</code> 值为 <code>layout</code>、<code>content</code>或 <code>strict</code> 的元素<br>弹性元素（<code>display</code>为 <code>flex</code> 或 <code>inline-flex</code>元素的直接子元素）<br>网格元素（<code>display</code>为 <code>grid</code> 或 <code>inline-grid</code> 元素的直接子元素）<br>多列容器（元素的 <code>column-count</code> 或 <code>column-width</code> 不为 <code>auto</code>，包括 <code>column-count</code> 为 <code>1</code>）<br><code>column-span</code> 为 <code>all</code> 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（ <a href="[https://link](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)">标准变更</a> ，<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362" target="_blank" rel="noopener">Chrome bug</a>）。<br>块格式化上下文包含创建它的元素内部的所有内容.  </p>
+<p>块格式化上下文对浮动定位（参见 float）与清除浮动（参见 clear）都很重要。浮动定位和清除浮动时只会应用于同一个BFC内的元素。浮动不会影响其它BFC中元素的布局，而清除浮动只能清除同一BFC中在它前面的元素的浮动。外边距折叠（Margin collapsing）也只会发生在属于同一BFC的块级元素之间。  </p>
+<p>以上只是引用网上的内容   </p>
+<p>触发BFC常用方式如下(部分情况也会使用上面内容):  </p>
+<p>1）position:absolute;<br>2）display:inline-block;<br>3）float:left/right;     //浮动<br>4）overflow:hidden;      //溢出盒子的部分要隐藏展示   </p>
+<p>具体使用见下方两个bug实例以及浮动模型   </p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">1</a></p>
+
       
     </div>
     
@@ -340,6 +353,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
       
 
       
@@ -410,8 +429,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +506,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC"><span class="nav-number">1.</span> <span class="nav-text">BFC</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
