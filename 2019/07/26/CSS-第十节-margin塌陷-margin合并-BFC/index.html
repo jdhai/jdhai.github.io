@@ -79,18 +79,33 @@
 
 
 
-<meta name="description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
+<meta name="description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
 <meta property="og:url" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
-<meta property="og:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
+<meta property="og:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-27T08:20:59.136Z">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin1.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin2.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin3.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin4.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin5.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin6.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin7.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin%E8%A7%A3%E5%86%B3.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/span1.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/span2.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
+<meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin%E5%90%88%E5%B9%B6.png">
+<meta property="og:updated_time" content="2019-07-27T13:13:08.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
-<meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]    下列方式会创建块格式化上下文：   根元素(&amp;lt;html&amp;gt;)浮动元素（元素的 float 不是 none）绝对定位元素（元素的 position 为 absolute 或 fixed）行内">
+<meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
+<meta name="twitter:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin1.png">
 
 
 
@@ -330,15 +345,111 @@
       
 
       
-        <h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p><strong>块格式化上下文（Block Formatting Context，BFC）</strong> 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [1]   </p>
+        <h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p><strong>块格式化上下文（Block Formatting Context，BFC）</strong> 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1]<br>[^1]:<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">引用至MDN</a></p>
 <p>下列方式会创建块格式化上下文：  </p>
-<p>根元素(<code>&lt;html&gt;</code>)<br>浮动元素（元素的 <code>float</code> 不是 <code>none</code>）<br>绝对定位元素（元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code>）<br>行内块元素（元素的 <code>display</code> 为 <code>inline-block</code>）<br>表格单元格（元素的 <code>display</code>为 <code>table-cell</code>，HTML表格单元格默认为该值）<br>表格标题（元素的 <code>display</code> 为 <code>table-caption</code>，HTML表格标题默认为该值）<br>匿名表格单元格元素（元素的 <code>display</code>为 <code>table</code>、<code>table-row</code>、 <code>table-row-group</code>、<code>table-header-group</code>、<code>table-footer-group</code>（分别是HTML table、row、tbody、thead、tfoot的默认属性）或 <code>inline-table</code>）<br><code>overflow</code> 值不为 <code>visible</code> 的块元素<br><code>display</code> 值为 <code>flow-root</code> 的元素<br><code>contain</code> 值为 <code>layout</code>、<code>content</code>或 <code>strict</code> 的元素<br>弹性元素（<code>display</code>为 <code>flex</code> 或 <code>inline-flex</code>元素的直接子元素）<br>网格元素（<code>display</code>为 <code>grid</code> 或 <code>inline-grid</code> 元素的直接子元素）<br>多列容器（元素的 <code>column-count</code> 或 <code>column-width</code> 不为 <code>auto</code>，包括 <code>column-count</code> 为 <code>1</code>）<br><code>column-span</code> 为 <code>all</code> 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（ <a href="[https://link](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)">标准变更</a> ，<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362" target="_blank" rel="noopener">Chrome bug</a>）。<br>块格式化上下文包含创建它的元素内部的所有内容.  </p>
+<blockquote>
+<ul>
+<li>根元素(<code>&lt;html&gt;</code>)  </li>
+<li>浮动元素（元素的 <code>float</code> 不是 <code>none</code>）  </li>
+<li>绝对定位元素（元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code>）  </li>
+<li>行内块元素（元素的 <code>display</code> 为 <code>inline-block</code>）  </li>
+<li>表格单元格（元素的 <code>display</code>为 <code>table-cell</code>，HTML表格单元格默认为该值）  </li>
+<li>表格标题（元素的 <code>display</code> 为 <code>table-caption</code>，HTML表格标题默认为该值）  </li>
+<li>匿名表格单元格元素（元素的 <code>display</code>为 <code>table</code>、<code>table-row</code>、 <code>table-row-group</code>、<code>table-header-group</code>、<code>table-footer-group</code>（分别是HTML table、row、tbody、thead、tfoot的默认属性）或 <code>inline-table</code>）  </li>
+<li><code>overflow</code> 值不为 <code>visible</code> 的块元素  </li>
+<li><code>display</code> 值为 <code>flow-root</code> 的元素  </li>
+<li><code>contain</code> 值为 <code>layout</code>、<code>content</code>或 <code>strict</code> 的元素  </li>
+<li>弹性元素（<code>display</code>为 <code>flex</code> 或 <code>inline-flex</code>元素的直接子元素）  </li>
+<li>网格元素（<code>display</code>为 <code>grid</code> 或 <code>inline-grid</code> 元素的直接子元素）  </li>
+<li>多列容器（元素的 <code>column-count</code> 或 <code>column-width</code> 不为 <code>auto</code>，包括 <code>column-count</code> 为 <code>1</code>）  </li>
+<li><code>column-span</code> 为 <code>all</code> 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（ <a href="[https://link](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)">标准变更</a> ，<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362" target="_blank" rel="noopener">Chrome bug</a>）。  </li>
+<li>块格式化上下文包含创建它的元素内部的所有内容.  </li>
+</ul>
+<blockquote>
 <p>块格式化上下文对浮动定位（参见 float）与清除浮动（参见 clear）都很重要。浮动定位和清除浮动时只会应用于同一个BFC内的元素。浮动不会影响其它BFC中元素的布局，而清除浮动只能清除同一BFC中在它前面的元素的浮动。外边距折叠（Margin collapsing）也只会发生在属于同一BFC的块级元素之间。  </p>
-<p>以上只是引用网上的内容   </p>
+</blockquote>
+</blockquote>
 <p>触发BFC常用方式如下(部分情况也会使用上面内容):  </p>
 <p>1）position:absolute;<br>2）display:inline-block;<br>3）float:left/right;     //浮动<br>4）overflow:hidden;      //溢出盒子的部分要隐藏展示   </p>
 <p>具体使用见下方两个bug实例以及浮动模型   </p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">1</a></p>
+<h2 id="margin塌陷"><a href="#margin塌陷" class="headerlink" title="margin塌陷"></a>margin塌陷</h2><h3 id="形成塌陷"><a href="#形成塌陷" class="headerlink" title="形成塌陷"></a>形成塌陷</h3><p>先来两个盒子  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrapper</span>&#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的两个父子级盒子  </p>
+<p><img src="margin1.png" alt="alt" title="两个盒子">  </p>
+<p>给绿色的加个margin-left  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-left</span>: 50<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="margin2.png" alt="alt" title="margin-left">  </p>
+<p>移动没毛病  </p>
+<p>问题来了,把margin-left改成加margin-top  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-top</span>: 50<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="margin3.png" alt="alt" title="margin-top">  </p>
+<p>与最初的两个盒子时的状态没有任何差别,margin-top不管用  </p>
+<p><font color="#8470FF">问题就是父子嵌套的盒子,子元素纵向使用margin不管作用</font>  </p>
+<p>如果子元素的margin-top比父级的100px大   </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-top</span>: 200<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="margin4.png" alt="alt">  </p>
+<p><font color="#8470FF">两个盒子同时移动了100px(200-100),</font>带他父亲走,这么拽的么<br><font color="#fcc">这个效果就是margin塌陷</font>,正常情况应该是父级相对于浏览器进行定位，子级应该相对于父级定位的,但是 margin 塌陷是在父级相对于浏览器进行定位时，子级没有相对于父级定位，就像父级顶上的棚子没有了一样,相当于棚塌陷了.  </p>
+<p><img src="margin%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98.png" alt="alt">  </p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>既然棚塌陷了,那加一个呗  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-top</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">black</span>;  <span class="comment">/*父级加上*/</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="margin5.png" alt="alt">  </p>
+<p>仿佛解决了,但事实没那么简单  </p>
+<p><font color="#008000">这个方法不能用,border-top多出来一像素,产品经理不同意</font>  </p>
+<p>正确解法就是用BFC  </p>
+<p>上面介绍了BFC的形成,现在试一下(让父级拥有BFC)  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span>&#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="margin6.png" alt="alt">  </p>
+<p>出现这个其实是成功了…只是<code>overflow:hidden;</code>让溢出部分隐藏了<br>那换一个  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="margin7.png" alt="alt">  </p>
+<p>说明完全没问题,但我为什么要举<code>overflow:hidden;</code>这个例子?  </p>
+<p>答案是 <font color="#00BFFF">这些方法都能触发 BFC，但是使用的时候都带来了新的麻烦,<br>在具体情况中，针对需求，哪个触发方式没有影响，就用哪个解决塌陷问题</font>  </p>
+<p><img src="margin%E8%A7%A3%E5%86%B3.png" alt="alt"></p>
+<h2 id="margin合并"><a href="#margin合并" class="headerlink" title="margin合并"></a>margin合并</h2><p>第七节盒子模型中有个margin隔开两个span的例子  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"demo2"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fcc</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="span1.png" alt="alt">  </p>
+<p>我给第一个span右边也加一个</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-right</span>: 200<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="span2.png" alt="alt">  </p>
+<p>margin造成的距离累加了  </p>
+<p><font color="#00BFFF">但和塌陷一样,问题也在纵轴方向</font>   </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo2"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fcc</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>都知道上面是什么样的,变化一下  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="div1.png" alt="alt">  </p>
+<p>再给demo2边一下 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span>&#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fcc</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>bug出现了,完全没变化  </p>
+<p><img src="div1.png" alt="alt">  </p>
+<p>我们试着用BFC解决  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo2"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="wrapper"&gt;</span><br><span class="line">  &lt;div class="demo1"&gt;1&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class="wrapper"&gt;</span><br><span class="line">    &lt;div class="demo2"&gt;2&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span>&#123;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>仿佛也是解决了,但并不然  </p>
+<p><font color="#00BFFF">上面这方法，改变了 HTML 的结构，这在开发中是不允许的,实际开发中，在 margin 合并这个 bug 上，不用 BFC（不能改变 html 的结构）假如我们需要两个 div 直接有 300px，那就设置上面的 <code>margin-bottom:300px;</code>来解决距离的问题</font>  </p>
+<p><img src="margin%E5%90%88%E5%B9%B6.png" alt="alt">  </p>
 
       
     </div>
@@ -516,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC"><span class="nav-number">1.</span> <span class="nav-text">BFC</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC"><span class="nav-number">1.</span> <span class="nav-text">BFC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#margin塌陷"><span class="nav-number">2.</span> <span class="nav-text">margin塌陷</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#形成塌陷"><span class="nav-number">2.1.</span> <span class="nav-text">形成塌陷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">2.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#margin合并"><span class="nav-number">3.</span> <span class="nav-text">margin合并</span></a></li></ol></div>
             
 
           </div>
