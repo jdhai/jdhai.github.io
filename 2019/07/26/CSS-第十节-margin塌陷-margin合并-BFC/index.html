@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
+<meta name="description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 absolute 或 fixed）">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
 <meta property="og:url" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
-<meta property="og:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
+<meta property="og:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 absolute 或 fixed）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin2.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin%E5%90%88%E5%B9%B6.gif">
-<meta property="og:updated_time" content="2019-07-27T14:47:26.232Z">
+<meta property="og:updated_time" content="2019-07-28T08:39:24.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
-<meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1][^1]:引用至MDN 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 ab">
+<meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 absolute 或 fixed）">
 <meta name="twitter:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin1.png">
 
 
@@ -345,7 +345,7 @@
       
 
       
-        <h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p><strong>块格式化上下文（Block Formatting Context，BFC）</strong> 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 [^1]<br>[^1]:<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">引用至MDN</a></p>
+        <h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p><strong>块格式化上下文（Block Formatting Context，BFC）</strong> 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。</p>
 <p>下列方式会创建块格式化上下文：  </p>
 <blockquote>
 <ul>
@@ -369,6 +369,7 @@
 <p>块格式化上下文对浮动定位（参见 float）与清除浮动（参见 clear）都很重要。浮动定位和清除浮动时只会应用于同一个BFC内的元素。浮动不会影响其它BFC中元素的布局，而清除浮动只能清除同一BFC中在它前面的元素的浮动。外边距折叠（Margin collapsing）也只会发生在属于同一BFC的块级元素之间。  </p>
 </blockquote>
 </blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener">引用于MDN</a>  </p>
 <p>触发BFC常用方式如下(部分情况也会使用上面内容):  </p>
 <p>1）position:absolute;<br>2）display:inline-block;<br>3）float:left/right;     //浮动<br>4）overflow:hidden;      //溢出盒子的部分要隐藏展示   </p>
 <p>具体使用见下方两个bug实例以及浮动模型   </p>
@@ -490,8 +491,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/27/CSS-十一-浮动模型-浮动元素/" rel="prev" title="CSS 十一 浮动模型 浮动元素">
-                CSS 十一 浮动模型 浮动元素 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/27/CSS-十一-浮动模型-浮动元素-伪元素/" rel="prev" title="CSS 十一 浮动模型 浮动元素 伪元素">
+                CSS 十一 浮动模型 浮动元素 伪元素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,6 +606,12 @@
                     <a href="mailto:tapoofits@gmail.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://catlair.coding.me" target="_blank" title="博客">
+                      
+                        <i class="fa fa-fw fa-book"></i>博客</a>
                   </span>
                 
             </div>
