@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://jdhai.github.io/2019/07/20/HTML-2-基础/titlebq.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/20/HTML-2-基础/%E7%AC%A6%E5%8F%B7-1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/20/HTML-2-基础/%E7%AC%A6%E5%8F%B7-2.png">
-<meta property="og:updated_time" content="2019-07-25T11:07:17.052Z">
+<meta property="og:updated_time" content="2019-07-29T06:42:50.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML 第二节 基础">
 <meta name="twitter:description" content="基础标签（必须）12345678910&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;    &amp;lt;h2&amp;gt;二级标题&amp;lt;/h2&amp;gt;    &amp;lt;p&amp;gt;这是一段话&amp;lt;/p&amp;gt;&amp;lt;/">
@@ -350,7 +350,7 @@
 
 <p><img src="%E7%BB%93%E6%9E%84.png" alt="alt"></p>
 <p>版本声明</p>
-<p>声明使用html5版本(不是标签，不是必须存在)</p>
+<p>声明使用html5版本(不是标签)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ol>
@@ -396,7 +396,7 @@
 
 <h2 id="文本格式化"><a href="#文本格式化" class="headerlink" title="文本格式化"></a>文本格式化</h2><p>HTML 使用标签  <code>&lt;b&gt;</code>(“bold粗体”) 与 <code>&lt;i&gt;</code>(“italic斜体”) 对输出字体进行控制</p>
 <blockquote>
-<p>通常标签 <code>&lt;strong&gt;</code> 替换加粗标签 <code>&lt;b&gt;</code> 来使用, <code>&lt;em&gt;</code> 替换 <code>&lt;i&gt;</code>标签使用。<br>但他们所表达的意义并不同<br>strong和em意味着体现文本的重要性，所以要突出显示</p>
+<p>通常标签 <code>&lt;strong&gt;</code> 替换加粗标签 <code>&lt;b&gt;</code> 来使用, <code>&lt;em&gt;</code> 替换 <code>&lt;i&gt;</code>标签使用。<br>但他们所表达的意义并不同<br>strong和em意味着体现文本的重要性，所以要突出显示(通常用这,而不是b和i)</p>
 </blockquote>
 <p>标签能够套用，例如</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span>又加粗又斜体<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">del</span>&gt;</span> 删除线 <span class="tag">&lt;/<span class="name">del</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -414,6 +414,9 @@
 </blockquote>
 <h2 id="其他常见单标签"><a href="#其他常见单标签" class="headerlink" title="其他常见单标签"></a>其他常见单标签</h2><p>大部分标签的作用是把他包裹的文本作用城他设置的样子，所以成对出现，有<br>的标签自己就代表功能，就是单标签</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span>换行符</span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span>水平线</span><br></pre></td></tr></table></figure>
+
+<p>单标签建议写成<code>&lt;br /&gt;</code>这种样式  </p>
+
       
     </div>
     
@@ -532,7 +535,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

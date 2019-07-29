@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/div1.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/26/CSS-第十节-margin塌陷-margin合并-BFC/margin%E5%90%88%E5%B9%B6.gif">
-<meta property="og:updated_time" content="2019-07-28T08:39:24.168Z">
+<meta property="og:updated_time" content="2019-07-29T06:51:01.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 第十节 margin塌陷 margin合并 BFC">
 <meta name="twitter:description" content="BFC块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 下列方式会创建块格式化上下文：     根元素(&amp;lt;html&amp;gt;)   浮动元素（元素的 float 不是 none）   绝对定位元素（元素的 position 为 absolute 或 fixed）">
@@ -400,8 +400,8 @@
 
 <p><img src="margin3.png" alt="alt" title="margin-top">  </p>
 <p>与最初的两个盒子时的状态没有任何差别,margin-top不管用  </p>
-<p><font color="#8470FF">问题就是父子嵌套的盒子,子元素纵向使用margin不管作用</font>  </p>
-<p>如果子元素的margin-top比父级的100px大   </p>
+<p><font color="#8470FF">问题就是父子嵌套的盒子,子元素纵向使用margin不起作用</font>  </p>
+<p>如果子元素的margin-top比父级margin的100px大   </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin-top</span>: 200<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
 
 <p><img src="margin4.png" alt="alt"><br>红框为后期添加(表示原来所在位置)  </p>
@@ -459,7 +459,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span>&#123;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>仿佛也是解决了,但并不然  </p>
-<p><font color="#00BFFF">上面这方法，改变了 HTML 的结构，这在开发中是不允许的,实际开发中，在 margin 合并这个 bug 上，不用 BFC（不能改变 html 的结构）假如我们需要两个 div 直接有 300px，那就设置上面的 <code>margin-bottom:300px;</code>来解决距离的问题</font>  </p>
+<p><font color="#00BFFF">上面这方法，改变了 HTML 的结构，这在开发中是不允许的,实际开发中，在 margin 合并这个 bug 上，不用 BFC（不能改变 html 的结构）假如我们需要两个 div 之间的距离有 300px，那就设置上面的 <code>margin-bottom:300px;</code>来解决距离的问题</font>  </p>
 <p><img src="margin%E5%90%88%E5%B9%B6.gif" alt="alt">  </p>
 
       
@@ -580,7 +580,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

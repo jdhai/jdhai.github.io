@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一般情况，一旦采取默认加载策略(css加载失败)，就是一片空白(文字都没有)   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:nowrap;强制文本不换行用 overflow:hidden;溢出部分隐藏">
+<meta name="description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一个普通的网站，一旦采取默认加载策略(css加载失败)，就是一片空白(因为大部分都是css操作,导致无法使用网站功能),下面的方法就是为了应对这种极端情况   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 十二 背景图片 要点补充">
 <meta property="og:url" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
-<meta property="og:description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一般情况，一旦采取默认加载策略(css加载失败)，就是一片空白(文字都没有)   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:nowrap;强制文本不换行用 overflow:hidden;溢出部分隐藏">
+<meta property="og:description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一个普通的网站，一旦采取默认加载策略(css加载失败)，就是一片空白(因为大部分都是css操作,导致无法使用网站功能),下面的方法就是为了应对这种极端情况   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/%E8%83%8C%E6%99%AF1.png">
@@ -99,10 +99,10 @@
 <meta property="og:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA6.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA7.png">
 <meta property="og:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/pdiv.png">
-<meta property="og:updated_time" content="2019-07-28T10:25:32.172Z">
+<meta property="og:updated_time" content="2019-07-29T06:58:06.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 十二 背景图片 要点补充">
-<meta name="twitter:description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一般情况，一旦采取默认加载策略(css加载失败)，就是一片空白(文字都没有)   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:nowrap;强制文本不换行用 overflow:hidden;溢出部分隐藏">
+<meta name="twitter:description" content="背景图片   background-size:可以只设置一个高background-position:只有left代表左中    一个普通的网站，一旦采取默认加载策略(css加载失败)，就是一片空白(因为大部分都是css操作,导致无法使用网站功能),下面的方法就是为了应对这种极端情况   方法一：用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度用 white-space:">
 <meta name="twitter:image" content="https://jdhai.github.io/2019/07/27/CSS-十二-背景图片-要点补充/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87.png">
 
 
@@ -357,7 +357,7 @@
 <blockquote>
 <p>background-size:可以只设置一个高<br>background-position:只有left代表左中  </p>
 </blockquote>
-<p>一般情况，一旦采取默认加载策略(css加载失败)，就是一片空白(文字都没有)  </p>
+<p>一个普通的网站，一旦采取默认加载策略(css加载失败)，就是一片空白(因为大部分都是css操作,导致无法使用网站功能),下面的方法就是为了应对这种极端情况  </p>
 <p>方法一：<br>用 text-indent:190px;首行缩进,缩进距离大于内容区的宽度<br>用 white-space:nowrap;强制文本不换行<br>用 overflow:hidden;溢出部分隐藏   </p>
 <p>方法二：<br>背景颜色，图片会作用在 padding 上，但是内容（文字）不能作用在 padding 上<br>让 height=0；<br>容器就会变成一条线，并且文字在图片外面<br>然后再加 padding-top:90px；<br>那么 padding 里面就会显示图片<br>最后用 overflow:hidden;溢出部分隐藏  </p>
 <p>淘宝使用第二种方法  </p>
@@ -378,7 +378,7 @@
 <p>想让单行文本溢出文字，打点，步骤：<br>首先先让文本失去换行功能，<code>white-space:nowrap;</code>;<br>再溢出部分不展示隐藏，<code>overflow:hidden;</code>;<br>最后把溢出部分打点，<code>text-overflow:ellipsis;</code>;  </p>
 <p><img src="%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA%E8%A7%A3%E5%86%B3.gif" alt="alt">  </p>
 <p><img src="%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA4.png" alt="alt">  </p>
-<h2 id="多行文本溢出"><a href="#多行文本溢出" class="headerlink" title="多行文本溢出"></a>多行文本溢出</h2><p>多行文字做截断<br>用手写上去的，估算出来的，新的CSS3方法,老版本的浏览器支持不太好，所以不用这种方法<br>其移动端上可以实现<br>height 是 line-height 的两倍，就展示两行，内容区域高是单行文本的高度整数倍。算好了高度就可以做截断了(后端传固定字数,之后打点)  </p>
+<h2 id="多行文本溢出"><a href="#多行文本溢出" class="headerlink" title="多行文本溢出"></a>多行文本溢出</h2><p>采用的方法是多行文字做截断<br><code>...</code>是用手写上去的，多少字截断是估算出来的，新的CSS3方法可以不用这么麻烦,但老版本的浏览器支持不太好，所以不用这种方法,其移动端上可以实现<br>height 是 line-height 的两倍，就展示两行，内容区域高是单行文本的高度整数倍。算好了高度就可以做截断了(后端传固定字数,之后打点)  </p>
 <p><img src="%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA6.png" alt="alt"><br><img src="%E6%96%87%E5%AD%97%E6%BA%A2%E5%87%BA7.png" alt="alt">  </p>
 <h2 id="元素嵌套"><a href="#元素嵌套" class="headerlink" title="元素嵌套"></a>元素嵌套</h2><ol>
 <li>行级元素只能嵌套行级元素  </li>
@@ -506,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
