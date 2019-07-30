@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JS,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
+<meta name="description" content="语句javascript语句以;分号结尾,表示一行代码,即使你写成多行,但系统只会看分号识别行数.   变量声明 声明、赋值分解var a; 这个叫变量声明。我们向系统中申请了一个空间，命名叫 a给 a 赋值 100，写作 a = 100;，这里不是等号是赋值号var a；a =100；可以简化写成 var a = 100；    单一 var 声明法var a,b,c,d;————单一 var">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS 第二节 基本语法">
 <meta property="og:url" content="https://jdhai.github.io/2019/07/28/JS-第二节-基本语法/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
+<meta property="og:description" content="语句javascript语句以;分号结尾,表示一行代码,即使你写成多行,但系统只会看分号识别行数.   变量声明 声明、赋值分解var a; 这个叫变量声明。我们向系统中申请了一个空间，命名叫 a给 a 赋值 100，写作 a = 100;，这里不是等号是赋值号var a；a =100；可以简化写成 var a = 100；    单一 var 声明法var a,b,c,d;————单一 var">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-28T13:41:31.885Z">
+<meta property="og:updated_time" content="2019-07-30T08:19:40.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS 第二节 基本语法">
+<meta name="twitter:description" content="语句javascript语句以;分号结尾,表示一行代码,即使你写成多行,但系统只会看分号识别行数.   变量声明 声明、赋值分解var a; 这个叫变量声明。我们向系统中申请了一个空间，命名叫 a给 a 赋值 100，写作 a = 100;，这里不是等号是赋值号var a；a =100；可以简化写成 var a = 100；    单一 var 声明法var a,b,c,d;————单一 var">
 
 
 
@@ -336,7 +340,46 @@
       
 
       
-        
+        <h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><p>javascript语句以<code>;</code>分号结尾,表示一行代码,即使你写成多行,但系统只会看分号识别行数.  </p>
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><ol>
+<li><p><font color="#00BFFF">声明、赋值分解</font><br><code>var a;</code> 这个叫变量声明。我们向系统中申请了一个空间，命名叫 a<br>给 a 赋值 100，写作 <code>a = 100;</code>，这里不是等号是赋值号<br><code>var a；a =100；</code>可以简化写成 <code>var a = 100；</code>  </p>
+</li>
+<li><p><font color="#00BFFF">单一 var 声明法</font><br><code>var a,b,c,d;</code>————单一 var 模式<br>同样可以同时赋值<br><code>var a = 1, b = 2, c = 3, d = 4;</code><br>为可读性通常写法是  </p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>,</span><br><span class="line">    b = <span class="number">2</span>,</span><br><span class="line">    c = <span class="number">3</span>,</span><br><span class="line">    d = <span class="number">4</span>;</span><br></pre></td></tr></table></figure>
+
+<p>赋值可以多次赋值.  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;</span><br><span class="line">    a = <span class="number">234</span>;</span><br></pre></td></tr></table></figure>
+
+<p>后面的值覆盖前面的值,所以是234;  </p>
+<h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><ol>
+<li>变量名必须以英文字母、_(下划线)、$ 开头  </li>
+<li>变量名可以包括英文字母、_、$、数字  </li>
+<li>不可以用系统的关键字、保留字作为变量名  </li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>一共7种,如下  </p>
+<h3 id="原始值-primitive-values"><a href="#原始值-primitive-values" class="headerlink" title="原始值( primitive values )"></a>原始值( primitive values )</h3><p>除 Object 以外的所有类型都是不可变的（值本身无法被改变）。例如，与 C 语言不同，JavaScript 中字符串是不可变的（译注：如，JavaScript 中对字符串的操作一定返回了一个新字符串，原始字符串并没有被改变）。我们称这些类型的值为“原始值”。  </p>
+<blockquote>
+<p>6 种原始类型:<br>Boolean<br>Null<br>Undefined<br>Number<br>String<br>Symbol (ECMAScript 6 新定义)  </p>
+</blockquote>
+<h3 id="对象object"><a href="#对象object" class="headerlink" title="对象object"></a>对象object</h3><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>原始值  stack 栈(放值)<br>引用值  heap  堆(放地址)  </p>
+<p>例子  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">var</span> arr1 = arr;</span><br><span class="line">arr.push(<span class="number">3</span>);</span><br><span class="line"><span class="built_in">document</span>.write(arr);</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(arr1);</span><br></pre></td></tr></table></figure>
+
+<p>改变arr的值,arr1也改变,因为arr和arr1的地址指向的一个数值(因为堆里只放地址,arr赋值给arr1,就是形成arr1的地址然后指向arr的值).原始值不会这样.  </p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>类似于 CSS，JavaScript 中可以添加注释。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这里的所有内容</span></span><br><span class="line"><span class="comment">都是注释。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>如果注释只有一行，可以更简单地放在两个斜杠之后，就像这样：  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一条注释。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>错误分为两种  </p>
+<ol>
+<li>低级错误(语法解析错误)该代码块不执行  </li>
+<li>逻辑错误(标准错误,情有可原) 该代码块在错误处停止运行,不影响其他  </li>
+</ol>
+
       
     </div>
     
@@ -350,6 +393,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
       
 
       
@@ -424,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -492,6 +550,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#语句"><span class="nav-number">1.</span> <span class="nav-text">语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量声明"><span class="nav-number">2.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量命名"><span class="nav-number">3.</span> <span class="nav-text">变量命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始值-primitive-values"><span class="nav-number">4.1.</span> <span class="nav-text">原始值( primitive values )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象object"><span class="nav-number">4.2.</span> <span class="nav-text">对象object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆栈"><span class="nav-number">4.3.</span> <span class="nav-text">堆栈</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">5.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误"><span class="nav-number">6.</span> <span class="nav-text">错误</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
