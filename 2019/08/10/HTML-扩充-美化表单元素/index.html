@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="CSS,">
+  <meta name="keywords" content="HTML,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
-<meta name="keywords" content="CSS">
+<meta name="description" content="新的伪类 focus  元素聚焦时的样式  checked  单选或多选框被选中的样式 常见用法 重置表单元素样式  设置textarea是否允许调整尺寸   css属性resize：  both：默认值，两个方向都可以调整尺寸 none：不能调整尺寸 horizontal: 水平方向可以调整尺寸 vertical：垂直方向可以调整尺寸   文本框边缘到内容的距离  控制单选和多选的样式">
+<meta name="keywords" content="HTML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS 第八节 元素分类(自带css属性修改)">
-<meta property="og:url" content="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/index.html">
+<meta property="og:title" content="HTML 扩充 美化表单元素">
+<meta property="og:url" content="https://jdhai.github.io/2019/08/10/HTML-扩充-美化表单元素/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
-<meta property="og:description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
+<meta property="og:description" content="新的伪类 focus  元素聚焦时的样式  checked  单选或多选框被选中的样式 常见用法 重置表单元素样式  设置textarea是否允许调整尺寸   css属性resize：  both：默认值，两个方向都可以调整尺寸 none：不能调整尺寸 horizontal: 水平方向可以调整尺寸 vertical：垂直方向可以调整尺寸   文本框边缘到内容的距离  控制单选和多选的样式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T14:04:58.277Z">
+<meta property="og:updated_time" content="2019-08-14T04:55:39.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS 第八节 元素分类(自带css属性修改)">
-<meta name="twitter:description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
+<meta name="twitter:title" content="HTML 扩充 美化表单元素">
+<meta name="twitter:description" content="新的伪类 focus  元素聚焦时的样式  checked  单选或多选框被选中的样式 常见用法 重置表单元素样式  设置textarea是否允许调整尺寸   css属性resize：  both：默认值，两个方向都可以调整尺寸 none：不能调整尺寸 horizontal: 水平方向可以调整尺寸 vertical：垂直方向可以调整尺寸   文本框边缘到内容的距离  控制单选和多选的样式">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/">
+  <link rel="canonical" href="https://jdhai.github.io/2019/08/10/HTML-扩充-美化表单元素/">
 
 
 
 
 
-  <title>CSS 第八节 元素分类(自带css属性修改) | Hexo | 菜鸟笔记</title>
+  <title>HTML 扩充 美化表单元素 | Hexo | 菜鸟笔记</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/">
+    <link itemprop="mainEntityOfPage" href="https://jdhai.github.io/2019/08/10/HTML-扩充-美化表单元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Catlair">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS 第八节 元素分类(自带css属性修改)</h1>
+          <h1 class="post-title" itemprop="name headline">HTML 扩充 美化表单元素</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-25T18:31:20+08:00">
-                2019-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-10T22:32:06+08:00">
+                2019-08-10
               </time>
             
 
@@ -340,35 +340,34 @@
       
 
       
-        <p>以下介绍三种其他后期也需要.</p>
-<h2 id="行级元素"><a href="#行级元素" class="headerlink" title="行级元素"></a>行级元素</h2><ol>
-<li>内容决定元素所占位置  </li>
-<li>不可以通过css改变宽高  </li>
+        <h2 id="新的伪类"><a href="#新的伪类" class="headerlink" title="新的伪类"></a>新的伪类</h2><ol>
+<li>focus</li>
 </ol>
-<p><code>span string em a del</code>  </p>
-<p>自带<code>display:inline;</code>  </p>
-<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><ol>
-<li>独占一行  </li>
-<li>可以通过css改变宽高  </li>
+<p>元素聚焦时的样式</p>
+<ol start="2">
+<li>checked</li>
 </ol>
-<p><code>html body div p ul li ol form address h1</code>  </p>
-<p>自带<code>display:block;</code></p>
-<h2 id="行级块元素"><a href="#行级块元素" class="headerlink" title="行级块元素"></a>行级块元素</h2><ol>
-<li>内容决定元素所占位置</li>
-<li>可以修改宽高</li>
+<p>单选或多选框被选中的样式</p>
+<h2 id="常见用法"><a href="#常见用法" class="headerlink" title="常见用法"></a>常见用法</h2><ol>
+<li><p>重置表单元素样式</p>
+</li>
+<li><p>设置textarea是否允许调整尺寸</p>
+</li>
 </ol>
-<p><code>img</code>   </p>
-<p>自带<code>display:inline-block;</code></p>
-<p><font color="#00BFFF">凡是拥有<code>inline</code>的都具有文字的属性</font>    </p>
-<h2 id="几个小demo"><a href="#几个小demo" class="headerlink" title="几个小demo"></a>几个小demo</h2><h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">a</span>&#123;</span><br><span class="line">      <span class="attribute">text-decoration</span>: none;</span><br><span class="line">      <span class="attribute">color</span>: <span class="number">#424242</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>css属性resize：</p>
+<ul>
+<li>both：默认值，两个方向都可以调整尺寸</li>
+<li>none：不能调整尺寸</li>
+<li>horizontal: 水平方向可以调整尺寸</li>
+<li>vertical：垂直方向可以调整尺寸</li>
+</ul>
+<ol start="3">
+<li><p>文本框边缘到内容的距离</p>
+</li>
+<li><p>控制单选和多选的样式</p>
+</li>
+</ol>
 
-<h3 id="ul-li-标签"><a href="#ul-li-标签" class="headerlink" title="ul li 标签"></a>ul li 标签</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> ,</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="em-标签-搜索中的红色字"><a href="#em-标签-搜索中的红色字" class="headerlink" title="em 标签(搜索中的红色字)"></a>em 标签(搜索中的红色字)</h3><p>大概与此类似  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">em</span>&#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><p>初始化所有标签</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>:none;</span><br><span class="line">    <span class="attribute">list-style</span>:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -385,7 +384,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CSS/" rel="tag"># CSS</a>
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
           
         </div>
       
@@ -398,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/25/CSS-第七节-盒子模型-层模型-等等/" rel="next" title="CSS 第七节 盒子模型 层模型">
-                <i class="fa fa-chevron-left"></i> CSS 第七节 盒子模型 层模型
+              <a href="/2019/08/10/HTML-扩充-表单元素/" rel="next" title="HTML 扩充 表单元素">
+                <i class="fa fa-chevron-left"></i> HTML 扩充 表单元素
               </a>
             
           </div>
@@ -408,8 +407,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/26/CSS-第九节-五环答案-两栏布局/" rel="prev" title="CSS 第九节 五环答案 两栏布局">
-                CSS 第九节 五环答案 两栏布局 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/10/HTML-扩充-其他元素/" rel="prev" title="HTML 扩充 其他元素">
+                HTML 扩充 其他元素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行级元素"><span class="nav-number">1.</span> <span class="nav-text">行级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素"><span class="nav-number">2.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行级块元素"><span class="nav-number">3.</span> <span class="nav-text">行级块元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个小demo"><span class="nav-number">4.</span> <span class="nav-text">几个小demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a标签"><span class="nav-number">4.1.</span> <span class="nav-text">a标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ul-li-标签"><span class="nav-number">4.2.</span> <span class="nav-text">ul li 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#em-标签-搜索中的红色字"><span class="nav-number">4.3.</span> <span class="nav-text">em 标签(搜索中的红色字)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通配符"><span class="nav-number">4.4.</span> <span class="nav-text">通配符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新的伪类"><span class="nav-number">1.</span> <span class="nav-text">新的伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见用法"><span class="nav-number">2.</span> <span class="nav-text">常见用法</span></a></li></ol></div>
             
 
           </div>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
+<meta name="description" content="color  元素内部的文字颜色 预设值：定义好的单词 三原色，色值：光学三原色（红、绿、蓝），每个颜色可以使用0-255之间的数字来表达，色值。 1234rgb表示法：rgb(0, 255, 0)hex（16进制）表示法：#红绿蓝  淘宝红：#ff4400, #f40黑色：#000000，#000白色：#ffffff, #fff红：#ff0000, #f00绿：#00ff00, #0f0蓝：#">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS 第八节 元素分类(自带css属性修改)">
-<meta property="og:url" content="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/index.html">
+<meta property="og:title" content="CSS 扩充 常见样式声明">
+<meta property="og:url" content="https://jdhai.github.io/2019/08/10/CSS-扩充-常见样式声明/index.html">
 <meta property="og:site_name" content="Hexo | 菜鸟笔记">
-<meta property="og:description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
+<meta property="og:description" content="color  元素内部的文字颜色 预设值：定义好的单词 三原色，色值：光学三原色（红、绿、蓝），每个颜色可以使用0-255之间的数字来表达，色值。 1234rgb表示法：rgb(0, 255, 0)hex（16进制）表示法：#红绿蓝  淘宝红：#ff4400, #f40黑色：#000000，#000白色：#ffffff, #fff红：#ff0000, #f00绿：#00ff00, #0f0蓝：#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T14:04:58.277Z">
+<meta property="og:updated_time" content="2019-08-14T04:59:57.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS 第八节 元素分类(自带css属性修改)">
-<meta name="twitter:description" content="以下介绍三种其他后期也需要. 行级元素 内容决定元素所占位置   不可以通过css改变宽高    span string em a del   自带display:inline;   块级元素 独占一行   可以通过css改变宽高    html body div p ul li ol form address h1   自带display:block; 行级块元素 内容决定元素所占位置 可以修改">
+<meta name="twitter:title" content="CSS 扩充 常见样式声明">
+<meta name="twitter:description" content="color  元素内部的文字颜色 预设值：定义好的单词 三原色，色值：光学三原色（红、绿、蓝），每个颜色可以使用0-255之间的数字来表达，色值。 1234rgb表示法：rgb(0, 255, 0)hex（16进制）表示法：#红绿蓝  淘宝红：#ff4400, #f40黑色：#000000，#000白色：#ffffff, #fff红：#ff0000, #f00绿：#00ff00, #0f0蓝：#">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/">
+  <link rel="canonical" href="https://jdhai.github.io/2019/08/10/CSS-扩充-常见样式声明/">
 
 
 
 
 
-  <title>CSS 第八节 元素分类(自带css属性修改) | Hexo | 菜鸟笔记</title>
+  <title>CSS 扩充 常见样式声明 | Hexo | 菜鸟笔记</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jdhai.github.io/2019/07/25/CSS-第八节-元素分类-自带css属性/">
+    <link itemprop="mainEntityOfPage" href="https://jdhai.github.io/2019/08/10/CSS-扩充-常见样式声明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Catlair">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS 第八节 元素分类(自带css属性修改)</h1>
+          <h1 class="post-title" itemprop="name headline">CSS 扩充 常见样式声明</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-25T18:31:20+08:00">
-                2019-07-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-10T22:35:01+08:00">
+                2019-08-10
               </time>
             
 
@@ -340,35 +340,82 @@
       
 
       
-        <p>以下介绍三种其他后期也需要.</p>
-<h2 id="行级元素"><a href="#行级元素" class="headerlink" title="行级元素"></a>行级元素</h2><ol>
-<li>内容决定元素所占位置  </li>
-<li>不可以通过css改变宽高  </li>
+        <ol>
+<li>color</li>
 </ol>
-<p><code>span string em a del</code>  </p>
-<p>自带<code>display:inline;</code>  </p>
-<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><ol>
-<li>独占一行  </li>
-<li>可以通过css改变宽高  </li>
+<p>元素内部的文字颜色</p>
+<p><strong>预设值</strong>：定义好的单词</p>
+<p><strong>三原色，色值</strong>：光学三原色（红、绿、蓝），每个颜色可以使用0-255之间的数字来表达，色值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rgb表示法：</span><br><span class="line">rgb(0, 255, 0)</span><br><span class="line">hex（16进制）表示法：</span><br><span class="line">#红绿蓝</span><br></pre></td></tr></table></figure>
+
+<p>淘宝红：#ff4400, #f40<br>黑色：#000000，#000<br>白色：#ffffff, #fff<br>红：#ff0000, #f00<br>绿：#00ff00, #0f0<br>蓝：#0000ff, #00f<br>紫：#f0f<br>青：#0ff<br>黄：#ff0<br>灰色：#ccc</p>
+<ol start="2">
+<li>background-color</li>
 </ol>
-<p><code>html body div p ul li ol form address h1</code>  </p>
-<p>自带<code>display:block;</code></p>
-<h2 id="行级块元素"><a href="#行级块元素" class="headerlink" title="行级块元素"></a>行级块元素</h2><ol>
-<li>内容决定元素所占位置</li>
-<li>可以修改宽高</li>
+<p>元素背景颜色</p>
+<ol start="3">
+<li>font-size</li>
 </ol>
-<p><code>img</code>   </p>
-<p>自带<code>display:inline-block;</code></p>
-<p><font color="#00BFFF">凡是拥有<code>inline</code>的都具有文字的属性</font>    </p>
-<h2 id="几个小demo"><a href="#几个小demo" class="headerlink" title="几个小demo"></a>几个小demo</h2><h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">a</span>&#123;</span><br><span class="line">      <span class="attribute">text-decoration</span>: none;</span><br><span class="line">      <span class="attribute">color</span>: <span class="number">#424242</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>元素内部文字的尺寸大小</p>
+<p>1）px：像素，绝对单位，简单的理解为文字的高度占多少个像素<br>2）em：相对单位，相对于父元素的字体大小<br>每个元素必须有字体大小，如果没有声明，则直接使用父元素的字体大小，如果没有父元素（html），则使用基准字号。</p>
+<blockquote>
+<p>user agent，UA，用户代理（浏览器）</p>
+</blockquote>
+<ol start="4">
+<li>font-weight</li>
+</ol>
+<p>文字粗细程度，可以取值数字，可以取值为预设值</p>
+<blockquote>
+<p>strong，默认加粗。</p>
+</blockquote>
+<ol start="5">
+<li>font-family</li>
+</ol>
+<p>文字类型</p>
+<p>必须用户计算机中存在的字体才会有效。</p>
+<p>使用多个字体，以匹配不同环境</p>
+<p>sans-serif，非衬线字体</p>
+<ol start="6">
+<li>font-style</li>
+</ol>
+<p>字体样式，通常用它设置斜体</p>
+<blockquote>
+<p>i元素，em元素，默认样式，是倾斜字体; 实际使用中，通常用它表示一个图标（icon）</p>
+</blockquote>
+<ol start="7">
+<li>text-decoration</li>
+</ol>
+<p>文本修饰，给文本加线。</p>
+<blockquote>
+<p>a元素<br>del元素：错误的内容<br>s元素：过期的内容</p>
+</blockquote>
+<ol start="8">
+<li>text-indent</li>
+</ol>
+<p>首行文本缩进</p>
+<ol start="9">
+<li>line-height</li>
+</ol>
+<p>每行文本的高度，该值越大，每行文本的距离越大。</p>
+<p>设置行高为容器的高度，可以让单行文本垂直居中</p>
+<p>行高可以设置为纯数字，表示相对于当前元素的字体大小</p>
+<ol start="10">
+<li>width</li>
+</ol>
+<p>宽度</p>
+<ol start="11">
+<li>height</li>
+</ol>
+<p>高度</p>
+<ol start="12">
+<li>letter-space</li>
+</ol>
+<p>文字间隙</p>
+<ol start="13">
+<li>text-align</li>
+</ol>
+<p>元素内部文字的水平排列方式</p>
 
-<h3 id="ul-li-标签"><a href="#ul-li-标签" class="headerlink" title="ul li 标签"></a>ul li 标签</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> ,</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="em-标签-搜索中的红色字"><a href="#em-标签-搜索中的红色字" class="headerlink" title="em 标签(搜索中的红色字)"></a>em 标签(搜索中的红色字)</h3><p>大概与此类似  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">em</span>&#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c00</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><p>初始化所有标签</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>:none;</span><br><span class="line">    <span class="attribute">list-style</span>:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -398,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/25/CSS-第七节-盒子模型-层模型-等等/" rel="next" title="CSS 第七节 盒子模型 层模型">
-                <i class="fa fa-chevron-left"></i> CSS 第七节 盒子模型 层模型
+              <a href="/2019/08/10/HTML-扩充-其他元素/" rel="next" title="HTML 扩充 其他元素">
+                <i class="fa fa-chevron-left"></i> HTML 扩充 其他元素
               </a>
             
           </div>
@@ -408,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/26/CSS-第九节-五环答案-两栏布局/" rel="prev" title="CSS 第九节 五环答案 两栏布局">
-                CSS 第九节 五环答案 两栏布局 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/10/CSS-扩充-选择器/" rel="prev" title="CSS 扩充 选择器">
+                CSS 扩充 选择器 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -462,17 +509,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -539,22 +577,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行级元素"><span class="nav-number">1.</span> <span class="nav-text">行级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素"><span class="nav-number">2.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行级块元素"><span class="nav-number">3.</span> <span class="nav-text">行级块元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个小demo"><span class="nav-number">4.</span> <span class="nav-text">几个小demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a标签"><span class="nav-number">4.1.</span> <span class="nav-text">a标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ul-li-标签"><span class="nav-number">4.2.</span> <span class="nav-text">ul li 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#em-标签-搜索中的红色字"><span class="nav-number">4.3.</span> <span class="nav-text">em 标签(搜索中的红色字)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通配符"><span class="nav-number">4.4.</span> <span class="nav-text">通配符</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
